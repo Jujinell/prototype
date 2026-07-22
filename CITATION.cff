@@ -4,7 +4,7 @@ authors:
   - family-names: "Schessler"
     given-names: "Julia"
     affiliation: "Hsh"
-    # orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "0009-0007-6477-3191"
 description: >-
   A Quarto website prototype demonstrating integration with Wikidata.
   Features SPARQL queries against Wikidata Query Service and renders
