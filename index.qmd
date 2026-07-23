@@ -1,6 +1,10 @@
 ---
 title: "Home"
 ---
+authors:
+    Names: Schessler Julia
+    Affiliation: "Hsh"
+    Orcid: "0009-0007-6477-3191"
 
 # BIM Prototype 02
 
@@ -9,6 +13,22 @@ This is the Quarto website source for the BIM prototype project.
 ## Featured page
 
 - [Wikidata Item Profile: Q138547468](wikidata-item.html)
+
+## Data Model Mapping to Standards for Q138572983
+| XML element                   | Wikidata property                                  | CIDOC CRM                                    |
+| ----------------------------- | -------------------------------------------------- | -------------------------------------------- |
+| identifier                    | Q138572983                                         | **E42 Identifier** / **P1 is identified by** |
+| title                         | P1476 (title)                                      | **P102 has title**                           |
+| type                          | P31 (instance of)                                  | **P2 has type**                              |
+| location                      | P276 (location)                                    | **P55 has current location**                 |
+| start_date                    | P580 (start time)                                  | **P4 has time-span**                         |
+| end_date                      | P582 (end time)                                    | **P4 has time-span**                         |
+| subject                       | P921 (main subject)                                | **P129 is about**                            |
+| creator *(Qualifier of P921)* | P170 (creator)                                     | **P94 has created** / **P14 carried out by** |
+| related_collection            | P972 (catalog)                                     | **P67 refers to**                            |
+| curator / contributor         | P1640                                              | **P14 carried out by**                       |
+| official_website              | P856 (official website)                            | **P67 refers to**                            |
+| website_language              | P407 (language of work or name, Qualifier of P856) | **P72 has language**                         |
 
 ## Changelog
 
