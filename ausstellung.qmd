@@ -1,0 +1,32 @@
+---
+title: "Ausstellung"
+---
+
+# Ausstellung: Q138572983
+
+Diese Seite beschreibt die Ausstellung mit der Wikidata-QID **Q138572983**.
+
+Die Ausstellung ist Teil des BIM Prototype 02 Quarto-Projekts und soll die Verbindung zwischen Museumsobjekten, Ausstellungsdaten und Wikidata-Referenzen dokumentieren.
+
+## Wikidata-Integration
+
+- Wikidata-QID: `Q138572983`
+- Wikidata-Seite: https://www.wikidata.org/wiki/Q138572983
+
+## Beschreibung
+
+Diese Seite kann als zentrale Projektseite für die Ausstellung genutzt werden. Sie dokumentiert relevante semantische Eigenschaften und bietet eine direkte Referenz zum Wikidata-Eintrag.
+
+## Projektkontext
+
+Die Ausstellung wurde als Beispiel für die Integration von kulturellen Daten in ein Quarto-Projekt erstellt. Sie ergänzt die bestehenden Seiten, indem sie eine spezifische Ausstellungspräsentation mit einer klaren Wikidata-Referenzierung verbindet.
+
+## Weiteres
+
+Zusätzliche Inhalte für diese Seite können sein:
+
+- Ausstellungsort
+- Laufzeit / Termine
+- Kurator:innen und beteiligte Institutionen
+- Objekte und Sammlungsbezüge
+- Verknüpfungen zu weiteren Wikidata-Items
