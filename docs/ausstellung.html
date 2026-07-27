@@ -8,7 +8,7 @@
 
 <meta name="author" content="Julia Schessler">
 
-<title>Project Log – BIM Prototype 02</title>
+<title>Ausstellung – BIM Prototype 02</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./project-log.html" aria-current="page"> 
+    <a class="nav-link" href="./project-log.html"> 
 <span class="menu-text">Project Log</span></a>
   </li>  
   <li class="nav-item">
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Wikidata</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ausstellung.html"> 
+    <a class="nav-link active" href="./ausstellung.html" aria-current="page"> 
 <span class="menu-text">Ausstellung</span></a>
   </li>  
   <li class="nav-item">
@@ -128,14 +128,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-log" id="toc-project-log" class="nav-link active" data-scroll-target="#project-log">Project Log</a>
+  <li><a href="#ausstellung-q138572983" id="toc-ausstellung-q138572983" class="nav-link active" data-scroll-target="#ausstellung-q138572983">Ausstellung: Q138572983</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2026-04-15</a></li>
-  <li><a href="#publishing-instructions" id="toc-publishing-instructions" class="nav-link" data-scroll-target="#publishing-instructions">Publishing Instructions</a>
-  <ul class="collapse">
-  <li><a href="#manual-publish-no-code-changes" id="toc-manual-publish-no-code-changes" class="nav-link" data-scroll-target="#manual-publish-no-code-changes">Manual publish (no code changes)</a></li>
-  <li><a href="#if-deployment-fails-on-pages-configuration" id="toc-if-deployment-fails-on-pages-configuration" class="nav-link" data-scroll-target="#if-deployment-fails-on-pages-configuration">If deployment fails on Pages configuration</a></li>
-  </ul></li>
+  <li><a href="#wikidata-integration" id="toc-wikidata-integration" class="nav-link" data-scroll-target="#wikidata-integration">Wikidata-Integration</a></li>
+  <li><a href="#beschreibung" id="toc-beschreibung" class="nav-link" data-scroll-target="#beschreibung">Beschreibung</a></li>
+  <li><a href="#projektkontext" id="toc-projektkontext" class="nav-link" data-scroll-target="#projektkontext">Projektkontext</a></li>
+  <li><a href="#weiteres" id="toc-weiteres" class="nav-link" data-scroll-target="#weiteres">Weiteres</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -145,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Log</h1>
+<h1 class="title">Ausstellung</h1>
 </div>
 
 
@@ -168,53 +166,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-log" class="level1">
-<h1>Project Log</h1>
-<p>Track important milestones and implementation notes here.</p>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2026-04-15</h2>
+<section id="ausstellung-q138572983" class="level1">
+<h1>Ausstellung: Q138572983</h1>
+<p>Diese Seite beschreibt die Ausstellung mit der Wikidata-QID <strong>Q138572983</strong>.</p>
+<p>Die Ausstellung ist Teil des BIM Prototype 02 Quarto-Projekts und soll die Verbindung zwischen Museumsobjekten, Ausstellungsdaten und Wikidata-Referenzen dokumentieren.</p>
+<section id="wikidata-integration" class="level2">
+<h2 class="anchored" data-anchor-id="wikidata-integration">Wikidata-Integration</h2>
 <ul>
-<li>Initialized Quarto website source files.</li>
-<li>Added GitHub Pages deployment workflow.</li>
-<li>Set Quarto output directory to <code>docs</code> for GitHub Pages publishing.</li>
-<li>Added notebook-backed item profile page for Wikidata item <code>Q138547468</code>.</li>
-<li>Created reusable helper module <code>wikidata_profile.py</code> for query, fetch, and rendering logic.</li>
-<li>Added visual summaries to the item profile page (top properties and value type breakdown).</li>
-<li>Fixed Wikidata endpoint access by sending explicit HTTP headers in SPARQL requests.</li>
-<li>Parameterized notebook workflow so <code>item_id</code> can be changed in one place.</li>
-<li>Enabled collapsible code blocks in rendered notebook HTML.</li>
-<li>Initialized git repository, pushed to <code>mrchristian/prototype</code>, and connected <code>origin</code>.</li>
-<li>Fixed GitHub Actions Pages setup failure by enabling automatic Pages enablement in workflow.</li>
-<li>Added manual <code>workflow_dispatch</code> deployment instructions in project documentation.</li>
+<li>Wikidata-QID: <code>Q138572983</code></li>
+<li>Wikidata-Seite: https://www.wikidata.org/wiki/Q138572983</li>
 </ul>
 </section>
-<section id="publishing-instructions" class="level2">
-<h2 class="anchored" data-anchor-id="publishing-instructions">Publishing Instructions</h2>
-<p>Use these steps to publish and re-publish the site to GitHub Pages.</p>
-<ol type="1">
-<li>Commit and push updates to <code>main</code>.</li>
-<li>In GitHub, open <strong>Settings -&gt; Pages</strong>.</li>
-<li>Under Build and deployment, set Source to <strong>GitHub Actions</strong>.</li>
-<li>Confirm the workflow file <code>.github/workflows/publish.yml</code> is present.</li>
-<li>Wait for the <strong>Publish Quarto Site</strong> workflow to complete.</li>
-</ol>
-<section id="manual-publish-no-code-changes" class="level3">
-<h3 class="anchored" data-anchor-id="manual-publish-no-code-changes">Manual publish (no code changes)</h3>
-<ol type="1">
-<li>Open <strong>Actions</strong> in GitHub.</li>
-<li>Select <strong>Publish Quarto Site</strong>.</li>
-<li>Click <strong>Run workflow</strong> and choose <code>main</code>.</li>
-</ol>
+<section id="beschreibung" class="level2">
+<h2 class="anchored" data-anchor-id="beschreibung">Beschreibung</h2>
+<p>Diese Seite kann als zentrale Projektseite für die Ausstellung genutzt werden. Sie dokumentiert relevante semantische Eigenschaften und bietet eine direkte Referenz zum Wikidata-Eintrag.</p>
 </section>
-<section id="if-deployment-fails-on-pages-configuration" class="level3">
-<h3 class="anchored" data-anchor-id="if-deployment-fails-on-pages-configuration">If deployment fails on Pages configuration</h3>
+<section id="projektkontext" class="level2">
+<h2 class="anchored" data-anchor-id="projektkontext">Projektkontext</h2>
+<p>Die Ausstellung wurde als Beispiel für die Integration von kulturellen Daten in ein Quarto-Projekt erstellt. Sie ergänzt die bestehenden Seiten, indem sie eine spezifische Ausstellungspräsentation mit einer klaren Wikidata-Referenzierung verbindet.</p>
+</section>
+<section id="weiteres" class="level2">
+<h2 class="anchored" data-anchor-id="weiteres">Weiteres</h2>
+<p>Zusätzliche Inhalte für diese Seite können sein:</p>
 <ul>
-<li>Re-check Settings -&gt; Pages is enabled for GitHub Actions.</li>
-<li>Re-run the workflow after enabling Pages.</li>
+<li>Ausstellungsort</li>
+<li>Laufzeit / Termine</li>
+<li>Kurator:innen und beteiligte Institutionen</li>
+<li>Objekte und Sammlungsbezüge</li>
+<li>Verknüpfungen zu weiteren Wikidata-Items</li>
 </ul>
 
 
-</section>
 </section>
 </section>
 

@@ -8,6 +8,12 @@ project:
     - ausstellung.qmd
     - wikidata-item.ipynb
 
+title: "BIM Prototype 02"
+metadata:
+  author:
+    - name: "Julia Schessler"
+      orcid: "0009-0007-6477-3191"
+
 website:
   title: "BIM Prototype 02"
   navbar:

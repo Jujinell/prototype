@@ -14,62 +14,6 @@
     "text": "SELECT ?property ?propertyLabel ?value ?valueLabel WHERE {\n  BIND(wd:Q138572983 AS ?item)\n  ?item ?p ?statement .\n  ?property wikibase:claim ?p .\n  ?statement ?ps ?value .\n  ?property wikibase:statementProperty ?ps .\n\n  SERVICE wikibase:label { bd:serviceParam wikibase:language \"[AUTO_LANGUAGE],en\". }\n}\nORDER BY ?propertyLabel"
   },
   {
-    "objectID": "project-log.html",
-    "href": "project-log.html",
-    "title": "Project Log",
-    "section": "",
-    "text": "Track important milestones and implementation notes here.\n\n\n\nInitialized Quarto website source files.\nAdded GitHub Pages deployment workflow.\nSet Quarto output directory to docs for GitHub Pages publishing.\nAdded notebook-backed item profile page for Wikidata item Q138547468.\nCreated reusable helper module wikidata_profile.py for query, fetch, and rendering logic.\nAdded visual summaries to the item profile page (top properties and value type breakdown).\nFixed Wikidata endpoint access by sending explicit HTTP headers in SPARQL requests.\nParameterized notebook workflow so item_id can be changed in one place.\nEnabled collapsible code blocks in rendered notebook HTML.\nInitialized git repository, pushed to mrchristian/prototype, and connected origin.\nFixed GitHub Actions Pages setup failure by enabling automatic Pages enablement in workflow.\nAdded manual workflow_dispatch deployment instructions in project documentation.\n\n\n\n\nUse these steps to publish and re-publish the site to GitHub Pages.\n\nCommit and push updates to main.\nIn GitHub, open Settings -&gt; Pages.\nUnder Build and deployment, set Source to GitHub Actions.\nConfirm the workflow file .github/workflows/publish.yml is present.\nWait for the Publish Quarto Site workflow to complete.\n\n\n\n\nOpen Actions in GitHub.\nSelect Publish Quarto Site.\nClick Run workflow and choose main.\n\n\n\n\n\nRe-check Settings -&gt; Pages is enabled for GitHub Actions.\nRe-run the workflow after enabling Pages."
-  },
-  {
-    "objectID": "project-log.html#section",
-    "href": "project-log.html#section",
-    "title": "Project Log",
-    "section": "",
-    "text": "Initialized Quarto website source files.\nAdded GitHub Pages deployment workflow.\nSet Quarto output directory to docs for GitHub Pages publishing.\nAdded notebook-backed item profile page for Wikidata item Q138547468.\nCreated reusable helper module wikidata_profile.py for query, fetch, and rendering logic.\nAdded visual summaries to the item profile page (top properties and value type breakdown).\nFixed Wikidata endpoint access by sending explicit HTTP headers in SPARQL requests.\nParameterized notebook workflow so item_id can be changed in one place.\nEnabled collapsible code blocks in rendered notebook HTML.\nInitialized git repository, pushed to mrchristian/prototype, and connected origin.\nFixed GitHub Actions Pages setup failure by enabling automatic Pages enablement in workflow.\nAdded manual workflow_dispatch deployment instructions in project documentation."
-  },
-  {
-    "objectID": "project-log.html#publishing-instructions",
-    "href": "project-log.html#publishing-instructions",
-    "title": "Project Log",
-    "section": "",
-    "text": "Use these steps to publish and re-publish the site to GitHub Pages.\n\nCommit and push updates to main.\nIn GitHub, open Settings -&gt; Pages.\nUnder Build and deployment, set Source to GitHub Actions.\nConfirm the workflow file .github/workflows/publish.yml is present.\nWait for the Publish Quarto Site workflow to complete.\n\n\n\n\nOpen Actions in GitHub.\nSelect Publish Quarto Site.\nClick Run workflow and choose main.\n\n\n\n\n\nRe-check Settings -&gt; Pages is enabled for GitHub Actions.\nRe-run the workflow after enabling Pages."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "authors: Names: Schessler Julia Affiliation: “Hsh” Orcid: “0009-0007-6477-3191”"
-  },
-  {
-    "objectID": "index.html#featured-page",
-    "href": "index.html#featured-page",
-    "title": "Home",
-    "section": "Featured page",
-    "text": "Featured page\n\nWikidata Item Profile: Q138547468"
-  },
-  {
-    "objectID": "index.html#data-model-mapping-to-standards",
-    "href": "index.html#data-model-mapping-to-standards",
-    "title": "Home",
-    "section": "Data Model Mapping to Standards",
-    "text": "Data Model Mapping to Standards\n\n\n\n\n\n\n\n\nXML element\nWikidata property\nCIDOC CRM\n\n\n\n\nidentifier\nQ138572983\nE42 Identifier / P1 is identified by\n\n\ntitle\nP1476 (title)\nP102 has title\n\n\ntype\nP31 (instance of)\nP2 has type\n\n\nlocation\nP276 (location)\nP55 has current location\n\n\nstart_date\nP580 (start time)\nP4 has time-span\n\n\nend_date\nP582 (end time)\nP4 has time-span\n\n\nsubject\nP921 (main subject)\nP129 is about\n\n\ncreator (Qualifier of P921)\nP170 (creator)\nP94 has created / P14 carried out by\n\n\nrelated_collection\nP972 (catalog)\nP67 refers to\n\n\ncurator / contributor\nP1640\nP14 carried out by\n\n\nofficial_website\nP856 (official website)\nP67 refers to\n\n\nwebsite_language\nP407 (language of work or name, Qualifier of P856)\nP72 has language"
-  },
-  {
-    "objectID": "index.html#changelog",
-    "href": "index.html#changelog",
-    "title": "Home",
-    "section": "Changelog",
-    "text": "Changelog\n\n2026-04-15\n\nInitialized the Quarto website and GitHub Pages workflow.\nSwitched Quarto output to docs for publishing.\nAdded a notebook-backed Wikidata item profile page with SPARQL-driven data rendering.\nAdded reusable query/render helper logic in wikidata_profile.py.\nAdded profile visual summaries and parameterized item_id input.\nSee full details in the Project Log."
-  },
-  {
-    "objectID": "index.html#next-steps",
-    "href": "index.html#next-steps",
-    "title": "Home",
-    "section": "Next steps",
-    "text": "Next steps\n\nAdd your project overview and goals.\nAdd additional pages as the project grows.\nPublish automatically via GitHub Pages."
-  },
-  {
     "objectID": "wikidata.html",
     "href": "wikidata.html",
     "title": "Wikidata",
@@ -91,11 +35,18 @@
     "text": "The profile page is generated from wikidata-item.ipynb, which:\n\nSets an item_id input (for example, Q138547468).\nBuilds a SPARQL query for all direct statements on the item.\nCalls the Wikidata Query Service endpoint.\nRenders the returned data as a styled HTML profile.\n\nThe helper module wikidata_profile.py contains reusable logic for querying, transforming, and rendering the data."
   },
   {
-    "objectID": "index.html#data-model-mapping-to-standards-for",
-    "href": "index.html#data-model-mapping-to-standards-for",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Home",
-    "section": "Data Model Mapping to Standards for",
-    "text": "Data Model Mapping to Standards for\n\n\n\n\n\n\n\n\nXML element\nWikidata property\nCIDOC CRM\n\n\n\n\nidentifier\nQ138572983\nE42 Identifier / P1 is identified by\n\n\ntitle\nP1476 (title)\nP102 has title\n\n\ntype\nP31 (instance of)\nP2 has type\n\n\nlocation\nP276 (location)\nP55 has current location\n\n\nstart_date\nP580 (start time)\nP4 has time-span\n\n\nend_date\nP582 (end time)\nP4 has time-span\n\n\nsubject\nP921 (main subject)\nP129 is about\n\n\ncreator (Qualifier of P921)\nP170 (creator)\nP94 has created / P14 carried out by\n\n\nrelated_collection\nP972 (catalog)\nP67 refers to\n\n\ncurator / contributor\nP1640\nP14 carried out by\n\n\nofficial_website\nP856 (official website)\nP67 refers to\n\n\nwebsite_language\nP407 (language of work or name, Qualifier of P856)\nP72 has language"
+    "section": "",
+    "text": "authors: Names: Schessler Julia Affiliation: “Hsh” Orcid: “0009-0007-6477-3191”"
+  },
+  {
+    "objectID": "index.html#featured-page",
+    "href": "index.html#featured-page",
+    "title": "Home",
+    "section": "Featured page",
+    "text": "Featured page\n\nWikidata Item Profile: Q138547468"
   },
   {
     "objectID": "index.html#data-model-mapping-to-standards-for-q138572983",
@@ -103,5 +54,75 @@
     "title": "Home",
     "section": "Data Model Mapping to Standards for Q138572983",
     "text": "Data Model Mapping to Standards for Q138572983\n\n\n\n\n\n\n\n\nXML element\nWikidata property\nCIDOC CRM\n\n\n\n\nidentifier\nQ138572983\nE42 Identifier / P1 is identified by\n\n\ntitle\nP1476 (title)\nP102 has title\n\n\ntype\nP31 (instance of)\nP2 has type\n\n\nlocation\nP276 (location)\nP55 has current location\n\n\nstart_date\nP580 (start time)\nP4 has time-span\n\n\nend_date\nP582 (end time)\nP4 has time-span\n\n\nsubject\nP921 (main subject)\nP129 is about\n\n\ncreator (Qualifier of P921)\nP170 (creator)\nP94 has created / P14 carried out by\n\n\nrelated_collection\nP972 (catalog)\nP67 refers to\n\n\ncurator / contributor\nP1640\nP14 carried out by\n\n\nofficial_website\nP856 (official website)\nP67 refers to\n\n\nwebsite_language\nP407 (language of work or name, Qualifier of P856)\nP72 has language"
+  },
+  {
+    "objectID": "index.html#changelog",
+    "href": "index.html#changelog",
+    "title": "Home",
+    "section": "Changelog",
+    "text": "Changelog\n\n2026-04-15\n\nInitialized the Quarto website and GitHub Pages workflow.\nSwitched Quarto output to docs for publishing.\nAdded a notebook-backed Wikidata item profile page with SPARQL-driven data rendering.\nAdded reusable query/render helper logic in wikidata_profile.py.\nAdded profile visual summaries and parameterized item_id input.\nSee full details in the Project Log."
+  },
+  {
+    "objectID": "index.html#next-steps",
+    "href": "index.html#next-steps",
+    "title": "Home",
+    "section": "Next steps",
+    "text": "Next steps\n\nAdd your project overview and goals.\nAdd additional pages as the project grows.\nPublish automatically via GitHub Pages."
+  },
+  {
+    "objectID": "project-log.html",
+    "href": "project-log.html",
+    "title": "Project Log",
+    "section": "",
+    "text": "Track important milestones and implementation notes here.\n\n\n\nInitialized Quarto website source files.\nAdded GitHub Pages deployment workflow.\nSet Quarto output directory to docs for GitHub Pages publishing.\nAdded notebook-backed item profile page for Wikidata item Q138547468.\nCreated reusable helper module wikidata_profile.py for query, fetch, and rendering logic.\nAdded visual summaries to the item profile page (top properties and value type breakdown).\nFixed Wikidata endpoint access by sending explicit HTTP headers in SPARQL requests.\nParameterized notebook workflow so item_id can be changed in one place.\nEnabled collapsible code blocks in rendered notebook HTML.\nInitialized git repository, pushed to mrchristian/prototype, and connected origin.\nFixed GitHub Actions Pages setup failure by enabling automatic Pages enablement in workflow.\nAdded manual workflow_dispatch deployment instructions in project documentation.\n\n\n\n\nUse these steps to publish and re-publish the site to GitHub Pages.\n\nCommit and push updates to main.\nIn GitHub, open Settings -&gt; Pages.\nUnder Build and deployment, set Source to GitHub Actions.\nConfirm the workflow file .github/workflows/publish.yml is present.\nWait for the Publish Quarto Site workflow to complete.\n\n\n\n\nOpen Actions in GitHub.\nSelect Publish Quarto Site.\nClick Run workflow and choose main.\n\n\n\n\n\nRe-check Settings -&gt; Pages is enabled for GitHub Actions.\nRe-run the workflow after enabling Pages."
+  },
+  {
+    "objectID": "project-log.html#section",
+    "href": "project-log.html#section",
+    "title": "Project Log",
+    "section": "",
+    "text": "Initialized Quarto website source files.\nAdded GitHub Pages deployment workflow.\nSet Quarto output directory to docs for GitHub Pages publishing.\nAdded notebook-backed item profile page for Wikidata item Q138547468.\nCreated reusable helper module wikidata_profile.py for query, fetch, and rendering logic.\nAdded visual summaries to the item profile page (top properties and value type breakdown).\nFixed Wikidata endpoint access by sending explicit HTTP headers in SPARQL requests.\nParameterized notebook workflow so item_id can be changed in one place.\nEnabled collapsible code blocks in rendered notebook HTML.\nInitialized git repository, pushed to mrchristian/prototype, and connected origin.\nFixed GitHub Actions Pages setup failure by enabling automatic Pages enablement in workflow.\nAdded manual workflow_dispatch deployment instructions in project documentation."
+  },
+  {
+    "objectID": "project-log.html#publishing-instructions",
+    "href": "project-log.html#publishing-instructions",
+    "title": "Project Log",
+    "section": "",
+    "text": "Use these steps to publish and re-publish the site to GitHub Pages.\n\nCommit and push updates to main.\nIn GitHub, open Settings -&gt; Pages.\nUnder Build and deployment, set Source to GitHub Actions.\nConfirm the workflow file .github/workflows/publish.yml is present.\nWait for the Publish Quarto Site workflow to complete.\n\n\n\n\nOpen Actions in GitHub.\nSelect Publish Quarto Site.\nClick Run workflow and choose main.\n\n\n\n\n\nRe-check Settings -&gt; Pages is enabled for GitHub Actions.\nRe-run the workflow after enabling Pages."
+  },
+  {
+    "objectID": "ausstellung.html",
+    "href": "ausstellung.html",
+    "title": "Ausstellung",
+    "section": "",
+    "text": "Diese Seite beschreibt die Ausstellung mit der Wikidata-QID Q138572983.\nDie Ausstellung ist Teil des BIM Prototype 02 Quarto-Projekts und soll die Verbindung zwischen Museumsobjekten, Ausstellungsdaten und Wikidata-Referenzen dokumentieren.\n\n\n\nWikidata-QID: Q138572983\nWikidata-Seite: https://www.wikidata.org/wiki/Q138572983\n\n\n\n\nDiese Seite kann als zentrale Projektseite für die Ausstellung genutzt werden. Sie dokumentiert relevante semantische Eigenschaften und bietet eine direkte Referenz zum Wikidata-Eintrag.\n\n\n\nDie Ausstellung wurde als Beispiel für die Integration von kulturellen Daten in ein Quarto-Projekt erstellt. Sie ergänzt die bestehenden Seiten, indem sie eine spezifische Ausstellungspräsentation mit einer klaren Wikidata-Referenzierung verbindet.\n\n\n\nZusätzliche Inhalte für diese Seite können sein:\n\nAusstellungsort\nLaufzeit / Termine\nKurator:innen und beteiligte Institutionen\nObjekte und Sammlungsbezüge\nVerknüpfungen zu weiteren Wikidata-Items"
+  },
+  {
+    "objectID": "ausstellung.html#wikidata-integration",
+    "href": "ausstellung.html#wikidata-integration",
+    "title": "Ausstellung",
+    "section": "",
+    "text": "Wikidata-QID: Q138572983\nWikidata-Seite: https://www.wikidata.org/wiki/Q138572983"
+  },
+  {
+    "objectID": "ausstellung.html#beschreibung",
+    "href": "ausstellung.html#beschreibung",
+    "title": "Ausstellung",
+    "section": "",
+    "text": "Diese Seite kann als zentrale Projektseite für die Ausstellung genutzt werden. Sie dokumentiert relevante semantische Eigenschaften und bietet eine direkte Referenz zum Wikidata-Eintrag."
+  },
+  {
+    "objectID": "ausstellung.html#projektkontext",
+    "href": "ausstellung.html#projektkontext",
+    "title": "Ausstellung",
+    "section": "",
+    "text": "Die Ausstellung wurde als Beispiel für die Integration von kulturellen Daten in ein Quarto-Projekt erstellt. Sie ergänzt die bestehenden Seiten, indem sie eine spezifische Ausstellungspräsentation mit einer klaren Wikidata-Referenzierung verbindet."
+  },
+  {
+    "objectID": "ausstellung.html#weiteres",
+    "href": "ausstellung.html#weiteres",
+    "title": "Ausstellung",
+    "section": "",
+    "text": "Zusätzliche Inhalte für diese Seite können sein:\n\nAusstellungsort\nLaufzeit / Termine\nKurator:innen und beteiligte Institutionen\nObjekte und Sammlungsbezüge\nVerknüpfungen zu weiteren Wikidata-Items"
   }
 ]
