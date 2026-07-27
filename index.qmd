@@ -1,10 +1,6 @@
 ---
 title: "Home"
 ---
-authors:
-    Names: Schessler Julia
-    Affiliation: "Hsh"
-    Orcid: "0009-0007-6477-3191"
 
 # BIM Prototype 02
 
