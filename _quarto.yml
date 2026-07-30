@@ -7,6 +7,8 @@ project:
     - wikidata.qmd
     - ausstellung.qmd
     - wikidata-item.ipynb
+    - Artist-Data-Model.qmd
+    - Exhibition-Data-Model.qmd
 
 title: "BIM Prototype 02"
 metadata:
@@ -28,6 +30,10 @@ website:
         text: Ausstellung
       - href: wikidata-item.ipynb
         text: Item Profile
+      - href: Artist-Data-Model.qmd
+        text: Artist Data Model
+      - href: Exhibition-Data-Model.qmd
+        text: Exhibition Data Model
 
 format:
   html:
